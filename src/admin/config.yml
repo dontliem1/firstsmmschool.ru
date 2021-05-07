@@ -82,7 +82,7 @@ collections:
         fields:
           - label: Отзывы
             label_singular: отзыв
-            name: feedback
+            name: items
             widget: list
             collapsed: false
             fields:
@@ -93,12 +93,12 @@ collections:
               - { label: Отзыв, name: text, widget: text }
               - { label: 'Ссылка на отзыв целиком', name: url, widget: string }
       - label: Курс
-        name: "settings"
-        file: "src/_data/settings.yaml"
+        name: "course"
+        file: "src/_data/course.yaml"
         fields:
           - { label: Дата старта, name: date, widget: datetime, date_format: true, time_format: false}
           - { label: Стоимость курса, name: price, widget: number, step: 1000, value_type: "int", default: 30000 }
-          - { label: Стоимость по скидке, name: price, widget: number, step: 1000, value_type: "int", default: 25000 }
+          - { label: Стоимость по скидке, name: discount, widget: number, step: 1000, value_type: "int", default: 25000 }
       - label: "Партнёры"
         name: "partners"
         file: "src/_data/partners.yaml"
