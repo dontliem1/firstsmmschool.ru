@@ -30,39 +30,84 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
-  - label: "Settings"
+  - label: "Настройка"
     name: "settings"
     editor:
       preview: false
     files:
-      - label: "Navigation"
+      - label: "Навигация"
         name: "items"
         file: "src/_data/navigation.yaml"
         fields:
           - label: Nav Items
             name: items
             widget: list
-            allow_add: false
-            collapsed: false
             fields:
-              - { label: Title, name: text, widget: string }
+              - { label: Заголовок, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
+      - label: "Программа"
+        name: "program"
+        file: "src/_data/program.yaml"
         fields:
-          - label: Nav Items
-            name: links
+          - { label: Описание, name: description, widget: text }
+          - label: Блоки
+            label_singular: блок
+            name: blocks
             widget: list
             collapsed: false
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
-      - label: "Meta Settings"
+              - { label: Название, name: heading, widget: string }
+              - { label: Продолжительность, name: duration, widget: string, required: false }
+              - { label: Подпись, name: description, widget: string, required: false }
+              - { label: Описание, name: text, widget: text }
+              - label: Инструменты
+                label_singular: инструмент
+                name: blocks
+                widget: list
+                fields:
+                  - { label: Название, name: label, widget: string }
+              - { label: Имя учителя, name: name, widget: string, required: false }
+              - { label: Регалии учителя, name: job, widget: string, required: false }
+              - { label: Фотография учителя, name: src,  widget: image, allow_multiple: false, required: false }
+          - label: Клиенты
+            label_singular: логотип
+            name: clients
+            widget: list
+            fields:
+              - { label: Название, name: alt, widget: string }
+              - { label: Логотип, name: src,  widget: image, allow_multiple: false }
+      - label: "Отзывы"
+        name: "feedback"
+        file: "src/_data/feedback.yaml"
+        fields:
+          - label: Отзывы
+            label_singular: отзыв
+            name: feedback
+            widget: list
+            collapsed: false
+            fields:
+              - { label: Имя, name: name, widget: string }
+              - { label: Фотография, name: src,  widget: image, allow_multiple: false }
+              - { label: 'Место работы', name: work, widget: string, required: false }
+              - { label: 'Ссылка на работу', name: workurl, widget: string, required: false }
+              - { label: Отзыв, name: text, widget: text }
+              - { label: 'Ссылка на отзыв целиком', name: url, widget: string }
+      - label: Курс
         name: "settings"
         file: "src/_data/settings.yaml"
         fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+          - { label: Дата старта, name: date, widget: datetime, date_format: true, time_format: false}
+          - { label: Стоимость курса, name: price, widget: number, step: 1000, value_type: "int", default: 30000 }
+          - { label: Стоимость по скидке, name: price, widget: number, step: 1000, value_type: "int", default: 25000 }
+      - label: "Партнёры"
+        name: "partners"
+        file: "src/_data/partners.yaml"
+        fields:
+          - label: Партнёры
+            name: items
+            widget: list
+            fields:
+              - { label: Заголовок, name: title, widget: string }
+              - { label: Описание, name: description, widget: text }
+              - { label: URL, name: url, widget: string }
+              - { label: Логотип, name: src,  widget: image, allow_multiple: false }

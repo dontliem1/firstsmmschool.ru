@@ -1,0 +1,9 @@
+<section class="container mb-8">
+    <h2 class="text-3xl mb-4">Участников курса ждут подарки от наших партнёров!</h2>
+    {% for item in partners.items %}
+        <a class="block rounded-2xl bg-gray-900 text-white py-4 pr-4 pl-24 partner--th mb-4" href="{{item.url}}" target="_blank" rel="noopener noreferrer">
+            <span class="text-2xl">{{item.title}}</span><br>
+            <span>{{item.description}}</span>
+        </a>
+    {% endfor %}
+</section>

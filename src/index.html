@@ -1,22 +1,123 @@
 ---
 layout: default
-title: Neat Starter
+title: Первая школа SMM | Тюмень
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
-
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
-
-  {% include "./_includes/partials/content.html" %}
-</div>
+<main class="main-wrapper">
+  <div class="container pt-10 pb-10 lg:grid gap-x-12">
+    <h1 class="font-semibold text-5xl">Первая школа SMM</h1>
+    <p class="text-2xl max-w-sm mt-4 mb-5">Очный курс профессионального ведения социальных сетей</p>
+    <p>Мы — команда специалистов из разных тюменских компаний. С 2015 мы помогаем людям рассказывать о себе и своих продуктах в интернете, создавать сообщества вокруг своих проектов, выстраивать каналы продаж и коммуникаций, и находить новых клиентов.</p>
+    <div class="mt-10 text-2xl flex flex-wrap justify-between -mr-4 row-start-1 row-end-4 col-start-2 lg:inline-block self-end">
+      <p class="hero__feature hero__feature--date">Ближайший старт 1 февраля</p>
+      <p class="hero__feature hero__feature--lessons">Очные занятия + практика</p>
+      <p class="hero__feature hero__feature--price">30 000 ₽ с рассрочкой</p>
+    </div>
+  </div>
+  <section class="bg-gray-50 pt-10 pb-16" id="program">
+    <div class="container">
+      <h2 class="text-4xl mb-4">Программа курса</h2>
+      <p class="text-xl">Курс длится два месяца. Всего 21 лекция по три дня в неделю: понедельник, среду и пятницу с 18:30 до 21:00. Плюс две недели внеклассной работы над своим проектом.</p>
+    </div>
+  </section>
+  <section class="container pt-12">
+    <h2 class="text-4xl mb-4">В конце курса вы будете уметь</h2>
+    <div class="text-xl flex flex-wrap justify-between">
+      <p class="features__item features__item--market">опреде­лять целевую аудиторию и формировать позицию на рынке,</p>
+      <p class="features__item features__item--strategy">разрабатывать стратегию и медиапланы,</p>
+      <p class="features__item features__item--instruments">выбирать и использовать инструменты продвижения,</p>
+      <p class="features__item features__item--target">настраивать таргетированную рекламу,</p>
+      <p class="features__item features__item--create">создавать запоминающийся графический и текстовый контент.</p>
+      <p class="text-white bg-blue-600 p-4 rounded-lg text-base mt-8">Если вы хотите просто заполнить пробелы, у нас есть формат платных консультаций с нашими специалистами. <a class="link-dashed" href="#contact">Напишите нам</a>, чтобы узнать подробности.</p>
+    </div>
+  </section>
+  <section class="container pt-12" id="price">
+    <h2 class="text-4xl mb-4">Учиться у нас — дешевле, чем заказывать продвижение</h2>
+    <p>Наши преподаватели работают в тюменских рекламных агентствах, поэтому о ценах мы говорим не по-наслышке.</p>
+    <div class="flex flex-wrap mt-6 text-white">
+      <div class="px-4 py-6 rounded-3xl inline-flex flex-col bg-red-500 mb-8 flex-grow sm:px-6">
+        <h3 class="text-3xl mb-4">Заказать в агентстве</h3>
+        <ul class="list-disc pl-5 space-y-1 mb-6">
+          <li>Первичный аудит сообщества — <span class="whitespace-nowrap">от 5&thinsp;000</span> рублей.</li>
+          <li>Оформление группы и постов — <span class="whitespace-nowrap">от 10&thinsp;000</span> рублей.</li>
+          <li>Настройка таргетированной рекламы — <span class="whitespace-nowrap">от 5&thinsp;000</span> рублей.</li>
+          <li>Месяц ведения аккаунта — <span class="whitespace-nowrap">от 20&thinsp;000</span> рублей.</li>
+          <li>Трата времени на контроль качества и согласования.</li>
+        </ul>
+        <p class="text-4xl mt-auto">от 40&thinsp;000 ₽</p>
+        <p>Ежемесячные траты.</p>
+      </div>
+      <div class="px-4 py-6 rounded-3xl inline-flex flex-col bg-green-500 mb-8 flex-grow sm:px-6">
+        <h3 class="text-3xl mb-4">Выучиться в Школе</h3>
+        <ul class="list-disc pl-5 space-y-1 mb-6">
+          <li>По цене одного курса вы получите комплексные знания про соц­сети, общение с клиентами, рекламу в ин­тер­не­те, дизайн и текст.</li>
+          <li>Предоплата для резервирования места — 5 000 рублей. Остальную часть суммы можно внести до конца теоретической части обучения.</li>
+          <li>По окончании школы у вас останутся наш учебник, блокнот и сертификат.</li>
+        </ul>
+        <p class="text-2xl mt-auto">30&thinsp;000 ₽</p>
+        <p>Раз и навсегда. Есть рассрочка.</p>
+      </div>
+    </div>
+  </section>
+  {% include "./_includes/partials/feedback.html" %}
+  {% include "./_includes/partials/partners.html" %}
+  <svg class="fill-current text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+  </svg>
+  <section class="bg-blue-600 text-white pt-8 pb-16" id="register">
+    <div class="container">
+      <h2 class="text-4xl mb-3">Регистрация</h2>
+      <p class="inline-block">Старт 1 февраля.</p> 
+      <p class="inline-block">Цена — 30&thinsp;000 ₽.</p>
+      <form class="text-xl mt-4 max-w-max mb-8">
+        <p><label>Имя<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full" type="text" name="name" placeholder="Мария"></label></p>
+        <p><label>Номер телефона<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full" type="tel" name="tel" size="18" placeholder="+7 999 999-99-99"></label></p>
+        <p><label>Электронная почта<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-6 w-full" type="email" name="email" placeholder="primer@mail.ru" size="30" required></label></p>
+        <input class="bg-white text-gray-900 px-5 pt-3 pb-4 rounded-full" type="submit" value="Отправить">
+      </form>
+      <div class="registration__notice">
+        <p class="mb-2">Мы собираем эту информацию для дальнейшей связи и заключения договора, храним в защищенном месте, и удаляем после старта ближайшего потока либо по вашей просьбе, направленной на <a class="link--solid" href="mailto:firstsmmschool@gmail.com">firstsmmschool@gmail.com</a>.</p>
+        <p>Нажимая на кнопку «Отправить», вы соглашаетесь с этими условиями.</p>
+      </div>
+    </div>
+  </section>
+  <section class="pt-12" id="contact">
+    <div class="container">
+      <h2 class="text-4xl mb-6">Контактная информация</h2>
+      <figure class="flex items-center mb-2">
+        <img class="rounded-full mr-4" loading="lazy" width="70" height="70" src="https://перваяшколасмм.рф/img/teachers/anton.png" alt="Фото Антона Данилова">
+        <figcaption>
+          <a class="font-semibold block text-xl leading-tight" href="tel:+79966390149">+7 996 639-01-49</a>
+          <b class="font-semibold block text-xl">Антон</b>
+          Управляющий школы
+        </figcaption>
+      </figure>
+      <div class="space-y-2 mb-2">
+        <p>Электронная почта: <a class="link--solid" href="mailto:firstsmmschool@gmail.com">firstsmmschool@gmail.com</a>
+        </p>
+        <p>Адрес: г.&nbsp;Тюмень, ул.&nbsp;50 лет Октября, 29, 7&nbsp;этаж</p>
+      </div>
+      <div>
+        <p class="mb-3">Подписывайтесь на наши социальные сети, чтобы быть в курсе новостей SMM, получать полезные материалы и ответы на вопросы.</p>
+        <a class="px-6 pt-3 pb-4 inline-flex items-center rounded-full bg-blue-500 text-white leading-none transition mr-2 mb-3 contact__social contact__social--vk hover:bg-blue-700" href="https://vk.com/first_smm_school" target="_blank">ВКонтакте</a>
+        <a class="px-6 pt-3 pb-4 inline-flex items-center rounded-full bg-purple-700 text-white leading-none transition contact__social contact__social--ig hover:bg-purple-900" href="https://www.instagram.com/schoolsmm_tmn/" target="_blank">Инстаграм</a>
+      </div>
+    </div>
+    <div class="contact-map">
+      <a class="dg-widget-link" href="http://2gis.ru/tyumen/firm/70000001027114573/center/65.54501295089723,57.130521741549536/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Тюмени</a>
+      <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+      <script charset="utf-8">new DGWidgetLoader({"width":320,"height":400,"pos":{"lat":57.130521741549536,"lon":65.54501295089723,"zoom":16},"opt":{"city":"tyumen"},"org":[{"id":"70000001027114573"}]});</script>
+      <noscript>Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+    </div>
+  </section>
+</main>
+<script>
+  let programButtons = document.getElementsByClassName('program__button');
+  for (let i = 0; i < programButtons.length; i++) {
+    programButtons[i].addEventListener('click', function (e) {
+      e.target.setAttribute('aria-expanded', (e.target.getAttribute('aria-expanded') === 'false'));
+      e.target.parentElement.classList.toggle('program__item--expanded');
+    })
+  }
+</script>

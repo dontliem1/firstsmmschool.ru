@@ -1,0 +1,27 @@
+<section class="main-feedback" id="feedback">
+    {% if feedback.links %}
+        <h2 class="text-4xl text-center mb-8">Отзывы учеников</h2>
+        <ul class="feedback-list mb-8 -mr-4 flex flex-wrap">
+        {% for item in feedback.links %}
+            <li class="pt-4 px-4 pb-6 rounded-2xl bg-white mb-4 feedback-item mr-4 flex-grow inline-flex flex-col">
+                <figure class="flex items-center">
+                    <img class="mr-3 rounded-lg" loading="lazy" src="{{item.src}}" alt="" width="64" height="64">
+                    <figcaption>
+                        <p class="font-semibold mb-1 text-xl leading-tight">{{item.name}}</p>
+                        <a class="underline" href="{{item.workurl}}" target="_blank" rel="noopener noreferrer">{{item.work | safe}}</a>
+                    </figcaption>
+                </figure>
+                <p class="mb-4 mt-2">{{item.text | safe}}</p>
+                <a class="underline mt-auto" href="{{item.url}}" target="_blank" rel="noopener noreferrer">Отзыв целиком</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% if feedback.clients %}
+    <ul class="feedback-clients pb-4">
+        {% for item in feedback.clients %}
+            <li><img loading="lazy" src="{{item.src}}" alt="{{item.alt}}" width="100"></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</section>
