@@ -2,9 +2,9 @@
 items:
   - title: TargetHunter
     description: Сервис поиска целевой аудитории в социальных сетях
-    url: https://targethunter.ru
-    src: https://targethunter.ru/template//landing2/images/logo2.svg
+    href: https://targethunter.ru
+    url: https://targethunter.ru/template//landing2/images/logo2.svg
   - title: Post My Post
     description: Профессиональный сервис автопостинга для SMM-агентств и специалистов
-    url: https://ru.postmypost.io
+    href: https://ru.postmypost.io
     src: https://app.postmypost.io/assets/pmp/img/background-hello3.jpg

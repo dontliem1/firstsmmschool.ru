@@ -1,9 +1,9 @@
 <section class="main-feedback" id="feedback">
     {% if feedback.links %}
         <h2 class="text-4xl text-center mb-8">Отзывы учеников</h2>
-        <ul class="feedback-list mb-8 -mr-4 flex flex-wrap">
+        <ul class="feedback__list mb-8 -mr-4 flex flex-wrap">
         {% for item in feedback.links %}
-            <li class="pt-4 px-4 pb-6 rounded-2xl bg-white mb-4 feedback-item mr-4 flex-grow inline-flex flex-col">
+            <li class="feedback__item pt-4 px-4 pb-6 rounded-2xl bg-white mb-4 mr-4 flex-grow inline-flex flex-col">
                 <figure class="flex items-center">
                     <img class="mr-3 rounded-lg" loading="lazy" src="{{item.src}}" alt="" width="64" height="64">
                     <figcaption>
@@ -18,7 +18,7 @@
         </ul>
     {% endif %}
     {% if feedback.clients %}
-    <ul class="feedback-clients pb-4">
+    <ul class="feedback__clients pb-4 flex flex-wrap justify-center gap-4">
         {% for item in feedback.clients %}
             <li><img loading="lazy" src="{{item.src}}" alt="{{item.alt}}" width="100"></li>
         {% endfor %}

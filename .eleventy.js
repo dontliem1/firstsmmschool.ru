@@ -1,5 +1,4 @@
 const yaml = require("js-yaml");
-const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
@@ -11,11 +10,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // human readable date
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "Asia/Yekaterinburg", loc: "ru-RU" }).toFormat(
-      "dd LLL yyyy"
-    );
-  });
+  eleventyConfig.addFilter("readableDate", dateStr => (new Date(dateStr)).toLocaleDateString('ru', {day: "numeric", month: "long"}));
+
+  /**
+   * Formats numbers in Russian
+   *
+   * @param num {number | string} Number
+   * @returns {void | string} Formatted number
+   */
+  eleventyConfig.addFilter("formatNumber", num => num.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ').replace('.', ','));
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -48,12 +51,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
     if (outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
+      return htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true
       });
-      return minified;
     }
 
     return content;

@@ -1,7 +1,7 @@
-<section class="container mb-8">
-    <h2 class="text-3xl mb-4">Участников курса ждут подарки от наших партнёров!</h2>
+<section class="gap-x-6 container mt-6 mb-8 lg:grid grid-cols-2">
+    <h2 class="partners__heading text-3xl mb-4">Участников курса ждут подарки от наших партнёров!</h2>
     {% for item in partners.items %}
-        <a class="block rounded-2xl bg-gray-900 text-white py-4 pr-4 pl-24 partner--th mb-4" href="{{item.url}}" target="_blank" rel="noopener noreferrer">
+        <a class="partners__link block rounded-2xl bg-gray-900 text-white py-4 pr-4 pl-24 partner--th mb-4" href="{{item.href}}" target="_blank" rel="noopener noreferrer" style="background-image: url('{{item.url}}')">
             <span class="text-2xl">{{item.title}}</span><br>
             <span>{{item.description}}</span>
         </a>

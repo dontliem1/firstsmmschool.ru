@@ -47,6 +47,38 @@
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' fill='rgba(128,128,128,.2)' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 22v36a6 6 0 006 6h44a6 6 0 006-6V30a6 6 0 00-6-6H22.5a2 2 0 110-4h37.16A6 6 0 0054 16H18a6 6 0 00-6 6zm40 21a4 4 0 118 0 4 4 0 01-8 0z'/%3E%3C/svg%3E");
 }
 
+/* Program */
+.program__block {
+  box-shadow: -.125em -.125px .25em #fff, .125em .125em .25em #c5cad6;
+  flex-basis: 20em;
+}
+.program__heading {
+  column-gap: .5em;
+  row-gap: .25em;
+  line-height: 1.2;
+}
+.program__inner {
+  gap: 1em 2em;
+}
+.program__item--expanded .program__inner {
+  display: flex;
+}
+.program__text {
+  flex-basis: 20em;
+}
+.program__tools {
+  flex-basis: 12em;
+}
+.program__btn {
+  border-bottom: 1px dashed #000;
+}
+.program__btn::before {
+  content: 'Развернуть';
+}
+.program__btn[aria-expanded=true]::before {
+  content: 'Свернуть';
+}
+
 /* Features */
 .features__item {
   position: relative;
@@ -54,10 +86,13 @@
   background-size: 5em;
   background-repeat: no-repeat;
   background-position-x: -.5em;
-  padding-top: 2em;
   min-height: 4.5em;
+  padding-top: 2em;
   padding-left: 1em;
   margin: 0 0 0 -1em;
+}
+.features__list > p {
+  flex-basis: 17.5rem;
   flex-grow: 1;
 }
 .features__item--market {
@@ -82,13 +117,12 @@
   border-radius: .5em;
 }
 
-/* Contacts */
-.contact-map iframe {
-  margin-top: 2em;
-  border: 0 !important;
-  width: 100%;
-  vertical-align: middle;
-  border-radius: 0 0 var(--main-padding) var(--main-padding);
+/* Price */
+.price__list {
+  gap: 1em;
+}
+.price__list > div {
+  flex-basis: 20em;
 }
 
 /* Feedback */
@@ -112,16 +146,61 @@
   border-radius: 2em;
   background-color: #f8faff;
 }
-.feedback-item {
+.feedback__item {
   transform: translateZ(0);
   box-shadow: 0 4em 6em -1em rgba(33, 55, 103, .05);
+  flex-basis: 20em;
 }
-@media (min-width: 20em) {
-  .feedback-item {
-    flex-basis: 20em;
+
+/* Partners */
+.partners__link {
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  background-position: 1rem 1rem;
+}
+.partners__heading {
+  grid-column: 1/2;
+}
+.partners__link {
+  grid-column: 2/3;
+}
+
+/* Form */
+.registration__date {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.registration__price {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.registration__form {
+  grid-row: 2/5;
+}
+.registration__notice {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  max-width: 28em;
+}
+@media (min-width: 1024px) {
+  .registration__wrapper {
+    grid-template-rows: auto auto auto 1fr;
   }
 }
 
+
+/* Contacts */
+.contact__social {
+  grid-row: 2/4;
+  max-width: 22em;
+}
+.contact__map iframe {
+  margin-top: 2em;
+  border: 0 !important;
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 0 0 var(--main-padding) var(--main-padding);
+}
 
 /* Syntax Highlighting*/
 

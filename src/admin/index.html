@@ -1,15 +1,34 @@
 <!doctype html>
-<html>
+<html lang="ru">
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Content Manager</title>
+        <title>Панель администратора</title>
+        <style>
+            div[role="menu"] > ul[width="auto"] {
+                width: max-content;
+            }
+        </style>
     </head>
-    <body>
+    <body style="min-width: 1000px;">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous"></script>
         <!-- Include the script that builds the page and powers Netlify CMS -->
         <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 
         <!-- Netlify Identity Widget -->
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+        <script>
+            const data = moment.localeData('ru');
+            let locale = {};
+            Object.keys(data).forEach(key => {
+                const value = data[key];
+                if (key.startsWith('_')) {
+                    key = key.substring(1);
+                }
+                locale[key] = value;
+            });
+            CMS.moment.locale('ru', locale);
+        </script>
     </body>
 </html>
