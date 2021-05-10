@@ -1,0 +1,12 @@
+---
+items:
+  - alt: Блокнот
+    src: /static/img/gallery/table.jpg
+  - alt: Занятие по Телеграму
+    src: /static/img/gallery/teacher.jpg
+  - alt: Учебники
+    src: /static/img/gallery/corner.jpg
+  - alt: Офлайн-курс
+    src: /static/img/gallery/entrance.jpg
+  - alt: Обучение СММ
+    src: /static/img/gallery/forest.jpg
