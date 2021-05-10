@@ -8,6 +8,7 @@ backend:
 media_folder: "src/static/img"
 public_folder: "/static/img"
 site_url: https://перваяшколасмм.рф
+logo_url: /static/img/logo.svg
 locale: 'ru'
 
 # Please run "npx netlify-cms-proxy-server" for local backend
@@ -114,3 +115,13 @@ collections:
               - { label: Описание, name: description, widget: text }
               - { label: URL, name: href, widget: string }
               - { label: Логотип, name: url,  widget: image, allow_multiple: false }
+      - label: Галерея
+        name: gallery
+        file: "src/_data/gallery.yaml"
+        fields:
+          - label: Галерея
+            name: items
+            widget: list
+            fields:
+              - { label: Альтернативный текст, name: alt, widget: string }
+              - { label: Фотография, name: src,  widget: image, allow_multiple: false }
