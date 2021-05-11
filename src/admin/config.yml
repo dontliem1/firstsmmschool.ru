@@ -15,24 +15,24 @@ locale: 'ru'
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
+  - label: "Блог"
     name: "blog"
     folder: "src/posts"
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Описание", name: "description", widget: "string" }
+      - { label: "Автор", name: "author", widget: "string" }
+      - { label: "Дата публикации", name: "date", widget: "datetime" }
+      - { label: "Содержимое", name: "body", widget: "markdown" }
       - widget: select
-        label: "tags"
+        label: "Теги"
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["SMM", "Дизайн", "Веб"]
   - label: Таплинк
     name: taplink
     editor:
