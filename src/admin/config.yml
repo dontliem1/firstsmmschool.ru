@@ -33,23 +33,40 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
-  - label: "Настройка"
-    name: "settings"
+  - label: Таплинк
+    name: taplink
     editor:
       preview: false
     files:
-      - label: "Навигация"
-        name: "items"
+      - label: Ссылки
+        name: items
+        file: "src/_data/info.yaml"
+        fields:
+          - label: Список ссылок
+            label_singular: ссылка
+            name: items
+            widget: list
+            fields:
+              - { label: Надпись на кнопке, name: text, widget: string }
+              - { label: Ссылка, name: href, widget: string }
+  - label: Основной сайт
+    name: settings
+    editor:
+      preview: false
+    files:
+      - label: Навигация
+        name: items
         file: "src/_data/navigation.yaml"
         fields:
-          - label: Nav Items
+          - label: Список ссылок
+            label_singular: ссылка
             name: items
             widget: list
             fields:
               - { label: Заголовок, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Программа"
-        name: "program"
+      - label: Программа
+        name: program
         file: "src/_data/program.yaml"
         fields:
           - { label: Описание, name: description, widget: text }

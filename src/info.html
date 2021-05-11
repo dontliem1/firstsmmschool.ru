@@ -1,0 +1,11 @@
+---
+layout: taplink
+title: Первая школа SMM
+---
+<div class="container flex flex-col text-center gap-y-4">
+  <h1 class="font-semibold text-3xl visually-hidden">{{title}}</h1>
+  <img class="w-full h-auto mb-2" src="/static/img/logo.svg" alt="{{title}}">
+  {% for item in info.items %}
+    <a class="bg-lightBlue-600 hover:bg-lightBlue-700 text-white px-4 py-3" href="{{ item.href }}">{{ item.text }}</a>
+  {% endfor %}
+</div>
