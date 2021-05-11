@@ -44,6 +44,9 @@ body {
 }
 
 /* Hero */
+.bg--alpaca {
+  background: url("/static/img/alpaca.svg") bottom right /contain no-repeat;
+}
 .hero__feature {
   margin: 0 1em 0 -1em;
   padding-left: 1em;
@@ -69,7 +72,8 @@ body {
 
 /* Gallery */
 .gallery {
-  padding: 0 var(--main-padding);
+  padding-left: var(--main-padding);
+  padding-right: var(--main-padding);
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -92,12 +96,16 @@ body {
 }
 
 /* Program */
-.program__list {
-  padding: 0 var(--main-padding);
+.program {
+  padding-left: var(--main-padding);
+  padding-right: var(--main-padding);
 }
 .program__block {
   box-shadow: -.125em -.125px .25em #fff, .125em .125em .25em #c5cad6;
   flex-basis: 20em;
+}
+.program__block--wide {
+  flex-basis: 40em;
 }
 .program__item--expanded .program__inner {
   display: flex;
