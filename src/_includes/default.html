@@ -9,9 +9,18 @@
     </title>
     {% if description %}
       <meta name="description" content="{{description}}"/>
+      <meta property="og:description" content="{{description}}"/>
     {% endif %}
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+
+    <meta name="theme-color" content="#0369A1">
+
+    <meta property="og:title" content="{{title}}"/>
+    <meta property="og:image" content="/static/img/gallery/table.jpg"/>
+    <meta property="og:url" content="firstsmmschool.ru"/>
+    <meta property="og:locale" content="ru"/>
+    <meta name="twitter:card" content="summary_large_image">
   </head>
   <body class="bg-gray-900 text-gray-50 font-light">
     {% include "./partials/navbar.html" %}

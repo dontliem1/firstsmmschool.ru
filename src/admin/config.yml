@@ -7,7 +7,7 @@ backend:
   # repo: surjithctly/neat-starter
 media_folder: "src/static/img"
 public_folder: "/static/img"
-site_url: https://перваяшколасмм.рф
+site_url: http://firstsmmschool.ru
 logo_url: /static/img/logo.svg
 locale: 'ru'
 
