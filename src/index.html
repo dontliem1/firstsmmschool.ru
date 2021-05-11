@@ -18,22 +18,22 @@ path: home
   </div>
   {% include "./_includes/partials/gallery.html" %}
   {% include "./_includes/partials/program.html" %}
-  <section class="container pt-12">
+  <section class="container my-12">
     <h2 class="text-4xl mb-4">В конце курса вы будете уметь</h2>
-    <div class="features__list gap-4 text-xl flex flex-wrap justify-between">
+    <div class="features__list gap-4 text-xl flex flex-wrap justify-between xl:grid grid-cols-3">
       <p class="features__item features__item--market">опреде­лять целевую аудиторию и формировать позицию на рынке,</p>
       <p class="features__item features__item--strategy">разрабатывать стратегию и медиапланы,</p>
       <p class="features__item features__item--instruments">выбирать и использовать инструменты продвижения,</p>
       <p class="features__item features__item--target">настраивать таргетированную рекламу,</p>
       <p class="features__item features__item--create">создавать запоминающийся графический и текстовый контент.</p>
-      <p class="text-white bg-blue-600 p-4 rounded-lg text-base mt-8">Также мы проводим индивидуальные консультации на отдельные темы. <a class="link-dashed" href="#contact">Напишите нам</a>, чтобы узнать подробности.</p>
+      <p class="text-white bg-lightBlue-600 p-4 rounded-lg text-base mt-8 bg-gradient-to-b from-lightBlue-600 to-lightBlue-400">Также мы проводим индивидуальные консультации на отдельные темы. <a class="link-dashed" href="#contact">Напишите нам</a>, чтобы узнать подробности.</p>
     </div>
   </section>
-  <section class="container pt-12 mb-10" id="price">
+  <section class="container pt-12 mb-12" id="price">
     <h2 class="text-4xl mb-4">Учиться у нас — дешевле, чем заказывать продвижение</h2>
     <p>Наши преподаватели работают в тюменских рекламных агентствах, поэтому о ценах мы говорим не по-наслышке.</p>
     <div class="gap-4 flex flex-wrap mt-6 text-white">
-      <div class="price__col px-4 py-6 rounded-3xl inline-flex flex-col bg-red-500 flex-grow sm:px-6">
+      <div class="price__col px-4 py-6 rounded-3xl inline-flex flex-col bg-red-500 flex-grow sm:px-6 bg-gradient-to-bl from-red-500 to-red-700">
         <h3 class="text-3xl mb-4">Заказать в агентстве</h3>
         <ul class="list-disc pl-5 space-y-1 mb-6">
           <li>Первичный аудит сообщества — <span class="whitespace-nowrap">от 5&thinsp;000</span> рублей.</li>
@@ -45,7 +45,7 @@ path: home
         <p class="text-4xl mt-auto">от 40&thinsp;000 ₽</p>
         <p>Ежемесячные траты.</p>
       </div>
-      <div class="price__col px-4 py-6 rounded-3xl inline-flex flex-col bg-green-500 flex-grow sm:px-6">
+      <div class="price__col px-4 py-6 rounded-3xl inline-flex flex-col bg-green-500 flex-grow sm:px-6 bg-gradient-to-bl from-green-500 to-green-700">
         <h3 class="text-3xl mb-4">Выучиться в Школе</h3>
         <ul class="list-disc pl-5 space-y-1 mb-6">
           <li>По цене одного курса вы получите комплексные знания про соц­сети, общение с клиентами, рекламу в ин­тер­не­те, дизайн и текст.</li>
@@ -59,18 +59,18 @@ path: home
   </section>
   {% include "./_includes/partials/feedback.html" %}
   {% include "./_includes/partials/partners.html" %}
-  <svg class="fill-current text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+  <svg class="fill-current text-lightBlue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="#0369A1">
     <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
   </svg>
-  <section class="bg-blue-600 text-white pt-8 pb-16" id="register">
+  <section class="bg-lightBlue-700 text-white pt-8 pb-16 bg-gradient-to-b from-lightBlue-700 to-lightBlue-500" id="register">
     <div class="registration__wrapper container lg:grid lg:gap-x-8">
       <h2 class="registration__title text-4xl mb-3">Регистрация</h2>
       <p class="col-start-2 row-start-2 inline-block lg:text-3xl lg:mt-3.5 mb-3">Старт {{course.date | readableDate}}.</p> 
       <p class="col-start-2 row-start-3 inline-block">Цена — {{course.price | formatNumber}} ₽.</p>
       <form class="row-start-2 row-end-5 text-xl mt-4 max-w-max mb-8 lg:mb-0">
-        <p><label>Имя<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full" type="text" name="name" placeholder="Мария"></label></p>
-        <p><label>Номер телефона<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full" type="tel" name="tel" size="18" placeholder="+7 999 999-99-99"></label></p>
-        <p><label>Электронная почта<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-6 w-full" type="email" name="email" placeholder="primer@mail.ru" size="30" required></label></p>
+        <p><label>Имя<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="text" name="name" placeholder="Мария"></label></p>
+        <p><label>Номер телефона<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="tel" name="tel" size="18" placeholder="+7 999 999-99-99"></label></p>
+        <p><label>Электронная почта<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-6 w-full text-black" type="email" name="email" placeholder="primer@mail.ru" size="30" required></label></p>
         <input class="bg-white text-gray-900 px-5 pt-3 pb-4 rounded-full" type="submit" value="Отправить">
       </form>
       <div class="col-start-2 row-start-4 max-w-md mt-auto">
@@ -80,7 +80,7 @@ path: home
     </div>
   </section>
   <section class="pt-12" id="contact">
-    <div class="container lg:grid grid-cols-2">
+    <div class="container lg:grid grid-cols-2 mb-12">
       <h2 class="text-4xl mb-6 col-span-2">Контактная информация</h2>
       <figure class="flex items-center mb-2">
         <img class="rounded-full mr-4" loading="lazy" width="70" height="70" src="/static/img/teachers/anton.jpg" alt="Фото менеджера Школы.">
@@ -96,7 +96,7 @@ path: home
         <p>Адрес: г.&nbsp;Тюмень, ул.&nbsp;50 лет Октября, 29, 7&nbsp;этаж</p>
       </div>
       <div class="col-start-2 row-start-2 row-end-4 max-w-sm">
-        <p class="mb-3">Подписывайтесь на наши социальные сети, чтобы быть в курсе новостей SMM, получать полезные материалы и ответы на вопросы.</p>
+        <p class="mb-6">Подписывайтесь на наши социальные сети, чтобы быть в курсе новостей SMM, получать полезные материалы и ответы на вопросы.</p>
         <a class="mr-2 mb-3 contact__social contact__social--vk" href="https://vk.com/first_smm_school" target="_blank">ВКонтакте</a>
         <a class="contact__social contact__social--ig" href="https://www.instagram.com/schoolsmm_tmn/" target="_blank">Инстаграм</a>
       </div>

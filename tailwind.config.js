@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: {
     mode: "all",
@@ -11,7 +13,7 @@ module.exports = {
       center: true,
     },
     extend: {
-      colors: {},
+      colors: colors,
     },
   },
   variants: {},
