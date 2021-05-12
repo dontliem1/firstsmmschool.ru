@@ -7,7 +7,7 @@ path: home
 
 <main class="main-wrapper pt-10">
   <div class="relative">
-    <div class="bg--alpaca hidden lg:block container absolute top-0 bottom-0 pointer-events-none"></div>
+    <div class="bg--alpaca container absolute top-0 bottom-0 pointer-events-none"></div>
     <div class="container pb-10 lg:grid gap-x-12 relative">
       <h1 class="font-semibold text-5xl visually-hidden">Первая школа SMM</h1>
       <picture>
@@ -15,7 +15,7 @@ path: home
         <img class="w-full md:w-3/5" src="/static/img/logo.svg" width="280" alt="Первая школа SMM">
       </picture>
       <p class="text-2xl max-w-sm mt-4 mb-5">{{description}}</p>
-      <p>Мы — команда специалистов из разных тюменских компаний. С 2015 мы помогаем людям рассказывать о себе и своих продуктах в интернете, создавать сообщества вокруг своих проектов, выстраивать каналы продаж и коммуникаций, и находить новых клиентов.</p>
+      <p class="max-w-lg">Мы — команда специалистов из разных тюменских компаний. С 2015 мы помогаем людям рассказывать о себе и своих продуктах в интернете, создавать сообщества вокруг своих проектов, выстраивать каналы продаж и коммуникаций, и находить новых клиентов.</p>
       <div class="mt-10 text-2xl flex flex-wrap justify-between -mr-4 row-start-1 row-end-4 col-start-2 lg:inline-block self-end">
         <p class="hero__feature hero__feature--date">Ближайший старт <time class="whitespace-nowrap" datetime="{{course.date | safe}}">{{course.date | readableDate}}</time></p>
         <p class="hero__feature hero__feature--lessons">Очные занятия + практика</p>
@@ -40,7 +40,7 @@ path: home
     <h2 class="text-4xl mb-4">Учиться у нас — дешевле, чем заказывать продвижение</h2>
     <p>Наши преподаватели работают в тюменских рекламных агентствах, поэтому о ценах мы говорим не по-наслышке.</p>
     <div class="gap-4 flex flex-wrap mt-6 text-white">
-      <div class="price__col px-4 py-6 rounded-3xl inline-flex flex-col bg-red-500 flex-grow sm:px-6 bg-gradient-to-bl from-red-500 to-red-700">
+      <div class="price__col px-4 py-6 sm:px-6 lg:pb-8 rounded-3xl inline-flex flex-col flex-grow bg-red-500 bg-gradient-to-bl from-red-500 to-red-700">
         <h3 class="text-3xl mb-4">Заказать в агентстве</h3>
         <ul class="list-disc pl-5 space-y-1 mb-6">
           <li>Первичный аудит сообщества — <span class="whitespace-nowrap">от 5&thinsp;000</span> рублей.</li>
@@ -52,7 +52,7 @@ path: home
         <p class="text-4xl mt-auto">от 40&thinsp;000 ₽</p>
         <p>Ежемесячные траты.</p>
       </div>
-      <div class="price__col px-4 py-6 rounded-3xl inline-flex flex-col bg-green-500 flex-grow sm:px-6 bg-gradient-to-bl from-green-500 to-green-700">
+      <div class="price__col px-4 py-6 sm:px-6 lg:pb-8 rounded-3xl inline-flex flex-col flex-grow bg-green-500 bg-gradient-to-bl from-green-500 to-green-700">
         <h3 class="text-3xl mb-4">Выучиться в Школе</h3>
         <ul class="list-disc pl-5 space-y-1 mb-6">
           <li>По цене одного курса вы получите комплексные знания про соц­сети, общение с клиентами, рекламу в ин­тер­не­те, дизайн и текст.</li>
@@ -75,22 +75,22 @@ path: home
       <p class="col-start-2 row-start-2 inline-block lg:text-3xl lg:mt-3.5 mb-3">Старт {{course.date | readableDate}}.</p> 
       <p class="col-start-2 row-start-3 inline-block">Цена — {{course.price | formatNumber}} ₽.</p>
       <form class="row-start-2 row-end-5 text-xl mt-4 max-w-max mb-8 lg:mb-0" method="POST" action="https://cp.unisender.com/ru/subscribe?hash=6i413oehtgia5q95i4sa9xpy16ews1cuocq3rdub4ss7tog6sjk4y" name="subscribtion_form">
-        <p class="subscribe-form-item subscribe-form-item--input-string">
+        <p class="subscribe-form-item subscribe-form-item--input-string mb-3">
           <label class="subscribe-form-item__label subscribe-form-item__label--input-string ">Имя<br>
-            <input class="subscribe-form-item__control subscribe-form-item__control--input-string rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="text" name="f_7545934" placeholder="Мария">
+            <input class="subscribe-form-item__control subscribe-form-item__control--input-string rounded-lg px-5 pt-3 pb-4 mt-1 w-full text-black" type="text" name="f_7545934" placeholder="Мария">
           </label>
         </p>
-        <p class="subscribe-form-item subscribe-form-item--input-string">
+        <p class="subscribe-form-item subscribe-form-item--input-string mb-3">
           <label class="subscribe-form-item__label subscribe-form-item__label--input-string ">Телефон<br>
-            <input class="subscribe-form-item__control subscribe-form-item__control--input-string rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="tel" name="phone" size="18" placeholder="+7 999 999-99-99">
+            <input class="subscribe-form-item__control subscribe-form-item__control--input-string rounded-lg px-5 pt-3 pb-4 mt-1 w-full text-black" type="tel" name="phone" size="18" placeholder="+7 999 999-99-99">
           </label>
         </p>
-        <p class="subscribe-form-item subscribe-form-item--input-email">
+        <p class="subscribe-form-item subscribe-form-item--input-email mb-5">
           <label class="subscribe-form-item__label subscribe-form-item__label--input-email subscribe-form-item__label--required">E-mail<br>
-            <input class="subscribe-form-item__control subscribe-form-item__control--input-email rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="email" name="email" placeholder="primer@mail.ru" size="30" required>
+            <input class="subscribe-form-item__control subscribe-form-item__control--input-email rounded-lg px-5 pt-3 pb-4 mt-1 w-full text-black" type="email" name="email" placeholder="primer@mail.ru" size="30" required>
           </label>
         </p>
-        <p class="subscribe-form-item subscribe-form-item--btn-submit mt-4">
+        <p class="subscribe-form-item subscribe-form-item--btn-submit">
           <input class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit bg-white text-gray-900 px-5 pt-3 pb-4 rounded-full" type="submit" value="Отправить">
         </p>
         <input type="hidden" name="charset" value="UTF-8">
@@ -99,8 +99,8 @@ path: home
         <input type="hidden" name="is_v5" value="1">
       </form>
       <div class="col-start-2 row-start-4 max-w-md mt-auto">
-        <p class="mb-2">Мы собираем эту информацию для дальнейшей связи и заключения договора, храним в защищенном месте, и удаляем после старта ближайшего потока либо по вашей просьбе, направленной на <a class="link--solid" href="mailto:firstsmmschool@gmail.com">firstsmmschool@gmail.com</a>.</p>
-        <p>Нажимая на кнопку «Отправить», вы соглашаетесь с этими условиями.</p>
+        <p class="mb-2">Мы собираем эту информацию для дальнейшей связи и заключения договора, храним в защищенном месте, и удаляем по вашей просьбе, выраженной лично, по телефону или направленной на <a class="link--solid" href="mailto:{{course.email}}">{{course.email}}</a>.</p>
+        <p>Нажимая на кнопку «Отправить», вы соглашаетесь с этими условиями. После этого вам на почту придет письмо, в котором нужно разрешить нам отправлять вам письма.</p>
       </div>
     </div>
   </section>
@@ -108,28 +108,32 @@ path: home
     <div class="container lg:grid grid-cols-2 mb-12">
       <h2 class="text-4xl mb-6 col-span-2">Контактная информация</h2>
       <figure class="flex items-center mb-2">
-        <img class="rounded-full mr-4" loading="lazy" width="70" height="70" src="/static/img/teachers/anton.jpg" alt="Фото менеджера Школы.">
+        <img class="rounded-full mr-4 w-20 h-20" loading="lazy" width="70" height="70" src="{{course.src}}" alt="Фото менеджера Школы.">
         <figcaption>
-          <a class="font-semibold block text-xl leading-tight" href="tel:+79966390149">+7 996 639-01-49</a>
-          <b class="font-semibold block text-xl">Антон</b>
-          Управляющий школы
+          <a class="font-semibold block text-xl leading-tight whitespace-nowrap" href="tel:{{ course.tel | replace(' ', '') | replace('-', '') }}">{{course.tel}}</a>
+          <b class="font-semibold block text-xl">{{course.name}}</b>
+          {{course.job}}
         </figcaption>
       </figure>
       <div class="space-y-2 mb-2">
-        <p>Электронная почта: <a class="link--solid" href="mailto:firstsmmschool@gmail.com">firstsmmschool@gmail.com</a>
+        <p>Электронная почта: <a class="link--solid" href="mailto:{{course.email}}">{{course.email}}</a>
         </p>
         <p>Адрес: г.&nbsp;Тюмень, ул.&nbsp;50 лет Октября, 29, 7&nbsp;этаж</p>
       </div>
       <div class="col-start-2 row-start-2 row-end-4 max-w-sm">
         <p class="mb-6">Подписывайтесь на наши социальные сети, чтобы быть в курсе новостей SMM, получать полезные материалы и ответы на вопросы.</p>
-        <a class="mr-2 mb-3 contact__social contact__social--vk" href="https://vk.com/first_smm_school" target="_blank">ВКонтакте</a>
-        <a class="contact__social contact__social--ig" href="https://www.instagram.com/schoolsmm_tmn/" target="_blank">Инстаграм</a>
+        {% if course.vk %}
+          <a class="mr-2 mb-3 contact__social contact__social--vk" href="{{course.vk}}" target="_blank" rel="noopener">ВКонтакте</a>
+        {% endif %}
+        {% if course.ig %}
+          <a class="contact__social contact__social--ig" href="{{course.ig}}" target="_blank" rel="noopener">Инстаграм</a>
+        {% endif %}
       </div>
     </div>
     <div class="contact__map">
-      <a class="dg-widget-link block pb-2 text-center" href="https://2gis.ru/tyumen/firm/70000001027114573/center/65.573333,57.130521741549536/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Тюмени</a>
+      <a class="dg-widget-link block pb-2 text-center" href="https://2gis.ru/tyumen/firm/70000001027114573/center/65.573333,57.150363/zoom/16">Посмотреть на карте Тюмени</a>
       <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
-      <script charset="utf-8">new DGWidgetLoader({"width":320,"height":400,"pos":{"lat":57.150363,"lon":65.54501295089723,"zoom":16},"opt":{"city":"tyumen"},"org":[{"id":"70000001027114573"}]});</script>
+      <script charset="utf-8">new DGWidgetLoader({"width":320,"height":400,"pos":{"lat":57.150363,"lon":65.573333,"zoom":16},"opt":{"city":"tyumen"},"org":[{"id":"70000001027114573"}]});</script>
       <noscript>Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
     </div>
   </section>

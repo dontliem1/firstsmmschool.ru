@@ -15,8 +15,8 @@ locale: 'ru'
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Блог"
-    name: "blog"
+  - label: Блог
+    name: blog
     folder: "src/posts"
     create: true
     editor:
@@ -65,6 +65,30 @@ collections:
             fields:
               - { label: Заголовок, name: text, widget: string }
               - { label: URL, name: url, widget: string }
+      - label: Курс
+        name: course
+        file: "src/_data/course.yaml"
+        fields:
+          - { label: Дата старта, name: date, widget: datetime, date_format: true, time_format: false}
+          - { label: Стоимость курса, name: price, widget: number, step: 1000, value_type: "int", default: 30000 }
+          - { label: Стоимость по скидке, name: discount, widget: number, step: 1000, value_type: "int", default: 25000, required: false }
+          - { label: Номер телефона менеджера, name: tel, widget: string, hint: "+7 999 999-99-99" }
+          - { label: Имя менеджера, name: name, widget: string }
+          - { label: Подпись менеджера, name: job, widget: string }
+          - { label: Фотография менеджера, name: src,  widget: image, allow_multiple: false }
+          - { label: Почта школы, name: email, widget: string }
+          - { label: Ссылка на ВКонтакте Школы, name: vk, widget: string, required: false }
+          - { label: Ссылка на Инстаграм Школы, name: ig, widget: string, required: false }
+      - label: Галерея
+        name: gallery
+        file: "src/_data/gallery.yaml"
+        fields:
+          - label: Галерея
+            name: items
+            widget: list
+            fields:
+              - { label: Альтернативный текст, name: alt, widget: string }
+              - { label: Фотография, name: src,  widget: image, allow_multiple: false }
       - label: Программа
         name: program
         file: "src/_data/program.yaml"
@@ -90,8 +114,8 @@ collections:
               - { label: Имя учителя, name: name, widget: string, required: false }
               - { label: Регалии учителя, name: job, widget: string, required: false }
               - { label: Фотография учителя, name: src,  widget: image, allow_multiple: false, required: false }
-      - label: "Отзывы"
-        name: "feedback"
+      - label: Отзывы
+        name: feedback
         file: "src/_data/feedback.yaml"
         fields:
           - label: Отзывы
@@ -113,15 +137,8 @@ collections:
             fields:
               - { label: Название, name: alt, widget: string }
               - { label: Логотип, name: src,  widget: image, allow_multiple: false }
-      - label: Курс
-        name: "course"
-        file: "src/_data/course.yaml"
-        fields:
-          - { label: Дата старта, name: date, widget: datetime, date_format: true, time_format: false}
-          - { label: Стоимость курса, name: price, widget: number, step: 1000, value_type: "int", default: 30000 }
-          - { label: Стоимость по скидке, name: discount, widget: number, step: 1000, value_type: "int", default: 25000, required: false }
-      - label: "Партнёры"
-        name: "partners"
+      - label: Партнёры
+        name: partners
         file: "src/_data/partners.yaml"
         fields:
           - label: Партнёры
@@ -132,13 +149,3 @@ collections:
               - { label: Описание, name: description, widget: text }
               - { label: URL, name: href, widget: string }
               - { label: Логотип, name: url,  widget: image, allow_multiple: false }
-      - label: Галерея
-        name: gallery
-        file: "src/_data/gallery.yaml"
-        fields:
-          - label: Галерея
-            name: items
-            widget: list
-            fields:
-              - { label: Альтернативный текст, name: alt, widget: string }
-              - { label: Фотография, name: src,  widget: image, allow_multiple: false }
