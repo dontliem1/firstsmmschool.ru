@@ -12,6 +12,9 @@ module.exports = function (eleventyConfig) {
   // human readable date
   eleventyConfig.addFilter("readableDate", dateStr => (new Date(dateStr)).toLocaleDateString('ru', {day: "numeric", month: "long"}));
 
+  // A year for footer
+  eleventyConfig.addShortcode("currentYear", () => `${new Date().getFullYear()}`);
+
   /**
    * Formats numbers in Russian
    *
