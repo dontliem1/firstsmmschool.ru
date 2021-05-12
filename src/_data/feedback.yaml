@@ -61,5 +61,3 @@ clients:
     src: /static/img/clients/sup.png
   - alt: Фонд поддержки предпринимательства Югры
     src: /static/img/clients/ugra.svg
-  - alt: Фсемирный фестиваль молодёжи и студентов
-    src: /static/img/clients/xix.png

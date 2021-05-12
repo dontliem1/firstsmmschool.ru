@@ -1,4 +1,4 @@
-<div class="gallery gap-x-6 flex overflow-x-auto pb-10">
+<div class="gallery gap-x-6 flex overflow-x-auto pb-10 relative">
     {% for item in gallery.items %}
         <img class="gallery__img rounded-md object-cover object-left" src="{{item.src}}" alt="{{item.alt}}" height="320" loading="lazy">
     {% endfor %}
