@@ -74,11 +74,29 @@ path: home
       <h2 class="registration__title text-4xl mb-3">Регистрация</h2>
       <p class="col-start-2 row-start-2 inline-block lg:text-3xl lg:mt-3.5 mb-3">Старт {{course.date | readableDate}}.</p> 
       <p class="col-start-2 row-start-3 inline-block">Цена — {{course.price | formatNumber}} ₽.</p>
-      <form class="row-start-2 row-end-5 text-xl mt-4 max-w-max mb-8 lg:mb-0">
-        <p><label>Имя<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="text" name="name" placeholder="Мария"></label></p>
-        <p><label>Номер телефона<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="tel" name="tel" size="18" placeholder="+7 999 999-99-99"></label></p>
-        <p><label>Электронная почта<br><input class="rounded-lg px-5 pt-3 pb-4 mt-1 mb-6 w-full text-black" type="email" name="email" placeholder="primer@mail.ru" size="30" required></label></p>
-        <input class="bg-white text-gray-900 px-5 pt-3 pb-4 rounded-full" type="submit" value="Отправить">
+      <form class="row-start-2 row-end-5 text-xl mt-4 max-w-max mb-8 lg:mb-0" method="POST" action="https://cp.unisender.com/ru/subscribe?hash=6i413oehtgia5q95i4sa9xpy16ews1cuocq3rdub4ss7tog6sjk4y" name="subscribtion_form">
+        <p class="subscribe-form-item subscribe-form-item--input-string">
+          <label class="subscribe-form-item__label subscribe-form-item__label--input-string ">Имя<br>
+            <input class="subscribe-form-item__control subscribe-form-item__control--input-string rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="text" name="f_7545934" placeholder="Мария">
+          </label>
+        </p>
+        <p class="subscribe-form-item subscribe-form-item--input-string">
+          <label class="subscribe-form-item__label subscribe-form-item__label--input-string ">Телефон<br>
+            <input class="subscribe-form-item__control subscribe-form-item__control--input-string rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="tel" name="phone" size="18" placeholder="+7 999 999-99-99">
+          </label>
+        </p>
+        <p class="subscribe-form-item subscribe-form-item--input-email">
+          <label class="subscribe-form-item__label subscribe-form-item__label--input-email subscribe-form-item__label--required">E-mail<br>
+            <input class="subscribe-form-item__control subscribe-form-item__control--input-email rounded-lg px-5 pt-3 pb-4 mt-1 mb-2 w-full text-black" type="email" name="email" placeholder="primer@mail.ru" size="30" required>
+          </label>
+        </p>
+        <p class="subscribe-form-item subscribe-form-item--btn-submit mt-4">
+          <input class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit bg-white text-gray-900 px-5 pt-3 pb-4 rounded-full" type="submit" value="Отправить">
+        </p>
+        <input type="hidden" name="charset" value="UTF-8">
+        <input type="hidden" name="default_list_id" value="20781675">
+        <input type="hidden" name="overwrite" value="2">
+        <input type="hidden" name="is_v5" value="1">
       </form>
       <div class="col-start-2 row-start-4 max-w-md mt-auto">
         <p class="mb-2">Мы собираем эту информацию для дальнейшей связи и заключения договора, храним в защищенном месте, и удаляем после старта ближайшего потока либо по вашей просьбе, направленной на <a class="link--solid" href="mailto:firstsmmschool@gmail.com">firstsmmschool@gmail.com</a>.</p>
@@ -117,3 +135,18 @@ path: home
   </section>
 </main>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  const telInputs = document.querySelectorAll('input[type=tel]');
+  for (let i = 0; i < telInputs.length; i++) {
+    telInputs[i].addEventListener('input', function(e) {
+      let cleaned = e.target.value.replace(/\D/g, '');
+      if (['7','8'].indexOf(cleaned[0]) >= 0) {
+        cleaned = cleaned.substring(1);
+      }
+      let match = cleaned.match(/^(\d{3})(\d{3})(\d{2})(\d{2})$/);
+      if (match) {
+        e.target.value = ['+7 ', match[1], ' ', match[2], '-', match[3], '-', match[4]].join('');
+      }
+    });
+  }
+</script>
