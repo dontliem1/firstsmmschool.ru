@@ -11,11 +11,20 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      padding: {
+        DEFAULT: '1.5rem',
+        lg: '10vw'
+      }
     },
     extend: {
       colors: colors,
     },
-  },
-  variants: {},
-  plugins: [require("@tailwindcss/typography")],
+    screens: {
+      'sm': '40em',
+      'md': '48em',
+      'lg': '64em',
+      'xl': '80em',
+      '2xl': '96em'
+    }
+  }
 };

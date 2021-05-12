@@ -28,16 +28,12 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.container {
-  padding-left: var(--main-padding);
-  padding-right: var(--main-padding);
-}
 .main-wrapper {
   background-color: #fff;
   border-radius: var(--main-padding);
   color: rgb(17, 24, 39);
 }
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   :root {
     --main-padding: 10vw;
   }
@@ -45,7 +41,13 @@ body {
 
 /* Hero */
 .bg--alpaca {
-  background: url("/static/img/alpaca.svg") bottom right /contain no-repeat;
+  background: url("/static/img/alpaca.svg") 100% 101% /auto 29.5em no-repeat;
+  right: var(--main-padding);
+}
+@media (min-width: 64em) {
+  .bg--alpaca {
+    background-size: contain;
+  }
 }
 .hero__feature {
   margin: 0 1em 0 -1em;
