@@ -71,8 +71,10 @@ blocks:
     teachers:
       - name: Рауф Исмаилов
         job: Ведущий и TikTok-продюсер.
+        src: /static/img/teachers/rauf.jpg
       - name: Егор Старченко
         job: Ведущий и корреспондент ТК «Тюменское время»
+        src: /static/img/teachers/egor.jpg
   - heading: Креативный контент
     id: creative
     duration: Две лекции
@@ -193,6 +195,7 @@ blocks:
     teachers:
       - name: Антон Данилов
         job: управляющий креативного агентства FOL’GA
+        src: /static/img/teachers/anton.jpg
   - heading: Практика
     id: practice
     duration: Две недели
