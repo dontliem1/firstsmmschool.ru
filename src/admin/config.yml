@@ -104,16 +104,26 @@ collections:
               - { label: ID, name: id, widget: string, hint: "Английское слово маленькими буквами, например marketing или design" }
               - { label: Продолжительность, name: duration, widget: string, required: false }
               - { label: Подпись, name: description, widget: string, required: false }
-              - { label: Описание, name: text, widget: text, required: false }
+              - label: Описание
+                label_singular: параграф
+                name: text
+                widget: list
+                fields:
+                  - { label: Параграф, name: paragraph, widget: text }
               - label: Инструменты
                 label_singular: инструмент
                 name: instruments
                 widget: list
                 fields:
                   - { label: Название, name: label, widget: string }
-              - { label: Имя учителя, name: name, widget: string, required: false }
-              - { label: Регалии учителя, name: job, widget: string, required: false }
-              - { label: Фотография учителя, name: src,  widget: image, allow_multiple: false, required: false }
+              - label: Преподаватели
+                label_singular: преподаватель
+                name: teachers
+                widget: list
+                fields:
+                  - { label: Имя учителя, name: name, widget: string }
+                  - { label: Регалии учителя, name: job, widget: string, required: false }
+                  - { label: Фотография учителя, name: src,  widget: image, allow_multiple: false, required: false }
       - label: Отзывы
         name: feedback
         file: "src/_data/feedback.yaml"

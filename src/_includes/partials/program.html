@@ -8,7 +8,11 @@
                 <div>
                     <p class="text-xl mt-2">{{item.description}}</p>
                     <div class="program__inner gap-y-4 gap-x-8 hidden lg:flex flex-wrap mt-4">
-                        <div class="program__text flex-grow">{{item.text}}</div>
+                        <div class="program__text flex-grow">
+                            {% for item in item.text %}
+                                <p class="mb-1">{{item.paragraph}}</p>
+                            {% endfor %}
+                        </div>
                         {% if item.instruments %}
                             <div class="program__tools flex-grow mb-4">
                                 <p>Инструменты:</p>
@@ -21,17 +25,17 @@
                         {% endif %}
                     </div>
                 </div>
-                {% if item.name %}
+                {% for teacher in item.teachers %}
                     <figure class="flex mt-auto items-start pt-6 xl:items-center">
-                        {% if item.src %}
-                            <img class="rounded-full h-auto{% if item.job %} mr-4 w-14 xl:w-28{% else %} mr-3 w-7{% endif %}" src="{{item.src}}" alt="" width="64" height="64">
+                        {% if teacher.src %}
+                            <img class="rounded-full h-auto{% if teacher.job %} mr-4 w-14 xl:w-28{% else %} mr-3 w-7{% endif %}" src="{{teacher.src}}" alt="" width="64" height="64">
                         {% endif %}
                         <figcaption class="text-sm">
-                            <span class="block text-xl leading-tight mb-1">{{item.name}}</span>
-                            {{item.job}}
+                            <span class="block text-xl leading-tight mb-1">{{teacher.name}}</span>
+                            {{teacher.job}}
                         </figcaption>
                     </figure>
-                {% endif %}
+                {% endfor %}
                 {% if item.text %}
                     <button class="program__btn mt-4 inline-block lg:hidden self-center opacity-50 cursor-pointer transition-colors text-xs" type="button" aria-expanded="false" aria-controls="{{item.id}}" aria-label="Подробности"></button>
                 {% endif %}

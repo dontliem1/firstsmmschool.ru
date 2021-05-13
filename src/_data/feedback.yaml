@@ -54,7 +54,7 @@ clients:
   - alt: Центр Развития Бизнеса
     src: /static/img/clients/crb.png
   - alt: Слёт Успешных Предпринимателей
-    src: /static/img/clients/sup.png
+    src: /static/img/clients/sup.svg
   - alt: Даудель спорт
     src: /static/img/clients/daudel.svg
   - alt: LiveDrive
@@ -73,8 +73,6 @@ clients:
     src: /static/img/clients/klyaksa.png
   - alt: Космос
     src: /static/img/clients/kosmos.png
-  - alt: Мой Бизнес
-    src: /static/img/clients/mb.svg
   - alt: Моя Территория
     src: /static/img/clients/mt.png
   - alt: ПСК ДОМ
