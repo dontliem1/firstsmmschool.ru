@@ -182,10 +182,6 @@ blocks:
     duration: Три лекции
     id: seo
     description: Теория и практика продвижения в поиске и рекламных сетях.
-  - heading: Практика
-    id: practice
-    duration: Две недели
-    description: Внеклассная работа над своим проектом.
   - heading: Основы проджект-менеджмента
     id: project
     duration: Две лекции
@@ -197,3 +193,7 @@ blocks:
     teachers:
       - name: Антон Данилов
         job: управляющий креативного агентства FOL’GA
+  - heading: Практика
+    id: practice
+    duration: Две недели
+    description: Внеклассная работа над своим проектом.
