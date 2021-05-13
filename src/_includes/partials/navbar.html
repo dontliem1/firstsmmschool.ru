@@ -1,4 +1,4 @@
-<nav class="container text-center pt-4 pb-4 flex flex-wrap justify-between items-baseline">
+<nav class="container text-center pt-4 pb-4 flex flex-wrap justify-around sm:justify-between items-baseline">
     <ul class="list-reset flex items-baseline -ml-4 flex-wrap">
         {% for item in navigation.items %}
             <li class="nav__item">
@@ -6,5 +6,5 @@
             </li>
         {% endfor %}
     </ul>
-    <a class="pt-2 pb-2.5 px-5 bg-lightBlue-500 text-white rounded-full hover:bg-lightBlue-600" href="/#register">Записаться</a>
+    <a class="pt-2 pb-2.5 px-5 bg-lightBlue-500 text-white rounded-full hover:bg-lightBlue-600 flex-grow sm:flex-grow-0" href="/#register">Записаться</a>
 </nav>
