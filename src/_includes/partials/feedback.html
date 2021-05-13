@@ -18,7 +18,7 @@
         </ul>
     {% endif %}
     {% if feedback.clients %}
-    <ul class="feedback__clients pb-4 flex flex-wrap justify-around text-center gap-4 md:gap-8 items-center">
+    <ul class="feedback__clients pb-4 flex flex-wrap justify-around text-center gap-4 md:gap-8 lg:gap-x-12 items-center">
         {% for item in feedback.clients %}
             <li><img class="feedback__client_img" loading="lazy" src="{{item.src}}" alt="{{item.alt}}" width="100"></li>
         {% endfor %}

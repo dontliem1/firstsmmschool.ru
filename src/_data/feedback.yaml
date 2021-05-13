@@ -53,11 +53,31 @@ clients:
     src: /static/img/clients/opora.png
   - alt: Центр Развития Бизнеса
     src: /static/img/clients/crb.png
+  - alt: Слёт Успешных Предпринимателей
+    src: /static/img/clients/sup.png
   - alt: Даудель спорт
     src: /static/img/clients/daudel.svg
   - alt: LiveDrive
     src: /static/img/clients/livedrive.png
-  - alt: Слёт Успешных Предпринимателей
-    src: /static/img/clients/sup.png
-  - alt: Фонд поддержки предпринимательства Югры
-    src: /static/img/clients/ugra.svg
+  - alt: Brows before Bros
+    src: /static/img/clients/bbb.svg
+  - alt: Baron Jacket
+    src: /static/img/clients/bj.svg
+  - alt: Джем
+    src: /static/img/clients/dzhem.png
+  - alt: Инвестиционное вгентство Тюменской области
+    src: /static/img/clients/iato.png
+  - alt: Kerama Marazzi
+    src: /static/img/clients/kerama.svg
+  - alt: Клякса
+    src: /static/img/clients/klyaksa.png
+  - alt: Космос
+    src: /static/img/clients/kosmos.png
+  - alt: Мой Бизнес
+    src: /static/img/clients/mb.svg
+  - alt: Моя Территория
+    src: /static/img/clients/mt.png
+  - alt: ПСК ДОМ
+    src: /static/img/clients/psk.svg
+  - alt: Тюменский Индустриальный Университет
+    src: /static/img/clients/tiu.png
