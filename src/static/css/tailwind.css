@@ -44,7 +44,7 @@ body {
   background: url("/static/img/alpaca.svg") 100% 101% /auto 29.5em no-repeat;
   right: var(--main-padding);
 }
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .bg--alpaca {
     background-size: contain;
   }
@@ -72,10 +72,45 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' fill='rgba(128,128,128,.2)' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 22v36a6 6 0 006 6h44a6 6 0 006-6V30a6 6 0 00-6-6H22.5a2 2 0 110-4h37.16A6 6 0 0054 16H18a6 6 0 00-6 6zm40 21a4 4 0 118 0 4 4 0 01-8 0z'/%3E%3C/svg%3E");
 }
 
+/* Stories */
+.stories {
+  padding-bottom: 2em;
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.stories__link {
+  font-size: 87.5%
+}
+.stories__img {
+  width: 4.8125em;
+  height: 4.8125em;
+}
+.gallery__group--active::before {
+  content: attr(title);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 200%;
+  color: #fff;
+  background-color: rgba(0,0,0,.5);
+  z-index: 20;
+  pointer-events: none;
+  animation: fade .5s .5s forwards;
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 /* Gallery */
 .gallery {
-  padding-left: var(--main-padding);
-  padding-right: var(--main-padding);
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -88,8 +123,6 @@ body {
 }
 .gallery__img {
   scroll-snap-align: center;
-  height: 20em;
-  width: auto;
 }
 .gallery::after {
   content: '';

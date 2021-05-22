@@ -1,0 +1,86 @@
+<div class="stories flex justify-start gap-4 container">
+    {% if gallery %}
+        <a href="#gallery" class="stories__link flex flex-col align-middle items-center text-center">
+            <img class="stories__img rounded-full object-cover object-center p-0.5 border-solid border-2 text-gray-500 bg-white" src="{{gallery.items[0].src}}" alt="" width="77" height="77" loading="lazy">
+            <span class="overflow-ellipsis">📸 Фото</span>
+        </a>
+    {% endif %}
+    {% if sale %}
+        <a href="#sale" class="stories__link flex flex-col align-middle items-center flex-shrink-0 text-center">
+            <img class="stories__img rounded-full object-cover object-center p-0.5 border-solid border-2 text-gray-500 bg-white" src="{{sale.items[0].src}}" alt="" width="77" height="77" loading="lazy">
+            <span>💯 Акции</span>
+        </a>
+    {% endif %}
+    <a href="#way" class="stories__link flex flex-col align-middle items-center text-center">
+        <img class="stories__img rounded-full object-cover object-center p-0.5 border-solid border-2 text-gray-500 bg-white" src="/static/img/location.jpg" alt="" width="77" height="77" loading="lazy">
+        <span class="overflow-ellipsis whitespace-nowrap">🚪 Вход</span>
+    </a>
+</div>
+<div class="gallery-wrapper fixed inset-0 hidden bg-black bg-opacity-75 z-10" id="stories">
+    {% if gallery %}
+        <div id="gallery" title="Фотографии">
+            {% for item in gallery.items %}
+                <img class="gallery__img object-cover object-left absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 max-w-full h-full hidden" src="{{item.src}}" alt="{{item.alt}}" height="320" loading="lazy">
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if sale %}
+        <div id="sale" title="Акции">
+            {% for item in sale.items %}
+                <img class="gallery__img object-cover object-left absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 max-w-full h-full hidden" src="{{item.src}}" alt="{{item.alt}}" height="320" loading="lazy">
+            {% endfor %}
+        </div>
+    {% endif %}
+    <div id="way" title="Как добраться">
+        <video class="gallery__img object-cover object-left absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 max-w-full h-full hidden" src="/static/img/way.mp4" height="320" loading="lazy" controls autoplay id="wayVideo"></video>
+    </div>
+    <button class="gallery__close text-white absolute top-0 right-0 p-4 text-xl z-20" type="button" onclick="this.parentElement.classList.add('hidden');
+            let activeImg = this.parentElement.querySelector('.z-10');
+            if (activeImg) {
+                activeImg.classList.remove('z-10');
+                activeImg.classList.add('hidden');
+                document.getElementById('wayVideo').pause();
+                document.getElementById('wayVideo').currentTime = 0;
+            }" title="Закрыть истории">╳</button>
+    <button class="text-white absolute top-1/2 -translate-y-1/2 right-0 p-4 text-xl z-20" type="button" onclick="let activeImg = document.querySelector('.gallery__img.z-10');
+            activeImg.classList.remove('z-10');
+            activeImg.classList.add('hidden');
+            if (activeImg.nextElementSibling) {
+                activeImg.nextElementSibling.classList.add('z-10');
+                activeImg.nextElementSibling.classList.remove('hidden');
+            } else if (activeImg.parentElement.nextElementSibling.tagName === 'DIV') {
+                activeImg.parentElement.nextElementSibling.children[0].classList.add('z-10');
+                activeImg.parentElement.nextElementSibling.children[0].classList.remove('hidden');
+                activeImg.parentElement.nextElementSibling.classList.add('gallery__group--active');
+                setTimeout(() => activeImg.parentElement.nextElementSibling.classList.remove('gallery__group--active'), 1000);
+            } else {
+                document.querySelector('.gallery__close').click();
+            }" title="Далее">→</button>
+    <button class="text-white absolute top-1/2 -translate-y-1/2 left-0 p-4 text-xl z-20" type="button" onclick="let activeImg = document.querySelector('.gallery__img.z-10');
+            activeImg.classList.remove('z-10');
+            activeImg.classList.add('hidden');
+            if (activeImg.previousElementSibling) {
+                activeImg.previousElementSibling.classList.add('z-10');
+                activeImg.previousElementSibling.classList.remove('hidden');
+            } else if (activeImg.parentElement.previousElementSibling) {
+                let previousBlock = activeImg.parentElement.previousElementSibling;
+                previousBlock.children[previousBlock.children.length - 1].classList.add('z-10');
+                previousBlock.children[previousBlock.children.length - 1].classList.remove('hidden');
+                previousBlock.classList.add('gallery__group--active');
+                setTimeout(() => previousBlock.classList.remove('gallery__group--active'), 1000);
+            } else {
+                document.querySelector('.gallery__close').click();
+            }" title="Назад">←</button>
+</div>
+<script>
+    let storiesLinks = document.getElementsByClassName('stories__link');
+    for (let link of storiesLinks) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            let target = document.getElementById(e.currentTarget.href.split('#')[1]).children[0];
+            document.getElementById('stories').classList.remove('hidden');
+            target.classList.remove('hidden');
+            target.classList.add('z-10');
+        });
+    }
+</script>

@@ -84,11 +84,23 @@ collections:
         file: "src/_data/gallery.yaml"
         fields:
           - label: Галерея
+            label_singular: фото
             name: items
             widget: list
             fields:
               - { label: Альтернативный текст, name: alt, widget: string }
               - { label: Фотография, name: src,  widget: image, allow_multiple: false }
+      - label: Акции
+        name: gallery
+        file: "src/_data/sale.yaml"
+        fields:
+          - label: Акции
+            label_singular: акция
+            name: items
+            widget: list
+            fields:
+              - { label: Альтернативный текст, name: alt, widget: string }
+              - { label: Картинка, name: src,  widget: image, allow_multiple: false }
       - label: Программа
         name: program
         file: "src/_data/program.yaml"
