@@ -129,6 +129,24 @@ body {
   padding-right: var(--main-padding);
   margin-left: -1rem;
 }
+.z-10 + .gallery__link {
+  z-index: 10;
+}
+.gallery__link {
+  transition: background-color .2s;
+}
+.gallery__link:hover {
+  background-color: #eee;
+}
+.gallery__link::before {
+  content: '^';
+  position: absolute;
+  top: -1em;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 600;
+}
 
 /* Program */
 .program {
