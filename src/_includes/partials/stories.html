@@ -33,7 +33,7 @@
         </div>
     {% endif %}
     <div id="way" title="Как добраться">
-        <video class="gallery__img object-cover object-left absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 max-w-full h-full hidden" src="/static/img/way.mp4" height="320" loading="lazy" controls autoplay id="wayVideo"></video>
+        <video class="gallery__img object-cover object-left absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 max-w-full h-full hidden" src="/static/img/way.mp4" height="320" loading="lazy" controls id="wayVideo"></video>
     </div>
     <button class="gallery__close text-white absolute top-0 right-0 p-4 text-xl z-20" type="button" onclick="this.parentElement.classList.add('hidden');
             let activeImg = this.parentElement.querySelector('.z-10');
@@ -46,7 +46,7 @@
     <button class="text-white absolute top-1/2 -translate-y-1/2 right-0 p-4 text-xl z-20" type="button" onclick="let activeImg = document.querySelector('.gallery__img.z-10');
             activeImg.classList.remove('z-10');
             activeImg.classList.add('hidden');
-            if (activeImg.nextElementSibling && (activeImg.nextElementSibling.tagName === 'img' || activeImg.nextElementSibling.tagName === 'video') ) {
+            if (activeImg.nextElementSibling && (activeImg.nextElementSibling.tagName === 'IMG' || activeImg.nextElementSibling.tagName === 'VIDEO') ) {
                 activeImg.nextElementSibling.classList.add('z-10');
                 activeImg.nextElementSibling.classList.remove('hidden');
             } else if (activeImg.parentElement.nextElementSibling.tagName === 'DIV') {

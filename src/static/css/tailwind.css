@@ -138,7 +138,7 @@ body {
 .gallery__link:hover {
   background-color: #eee;
 }
-.gallery__link::before {
+.z-10 + .gallery__link::before {
   content: '^';
   position: absolute;
   top: -1em;
