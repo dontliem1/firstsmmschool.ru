@@ -91,7 +91,7 @@ collections:
               - { label: Альтернативный текст, name: alt, widget: string }
               - { label: Фотография, name: src,  widget: image, allow_multiple: false }
       - label: Акции
-        name: gallery
+        name: sale
         file: "src/_data/sale.yaml"
         fields:
           - label: Акции
@@ -102,6 +102,16 @@ collections:
               - { label: Альтернативный текст, name: alt, widget: string }
               - { label: Ссылка, name: url, widget: string }
               - { label: Картинка, name: src,  widget: image, allow_multiple: false }
+      - label: Статьи
+        name: articles
+        file: "src/_data/articles.yaml"
+        fields:
+          - label: Статьи
+            label_singular: статья
+            name: items
+            widget: list
+            fields:
+              - { label: Ссылка, name: url, widget: string }
       - label: Программа
         name: program
         file: "src/_data/program.yaml"

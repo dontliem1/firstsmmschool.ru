@@ -1,0 +1,17 @@
+---
+title: Наши статьи
+layout: blog
+---
+<script src="https://vk.com/js/api/openapi.js?169"></script>
+
+<ul class="mt-5 flex flex-wrap gap-4 container">
+{% for item in articles.items %}
+    <li class="articles__item flex-grow" id="article{{loop.index}}"></li>
+{% endfor %}
+</ul>
+
+<script>
+    {% for item in articles.items %}
+        VK.Widgets.Article("article{{loop.index}}", "{{item.url | replace('https://vk.com/', '')}}");
+    {% endfor %}
+</script>

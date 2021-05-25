@@ -41,7 +41,7 @@ body {
 
 /* Hero */
 .bg--alpaca {
-  background: url("/static/img/alpaca.svg") 100% 101% /auto 29.5em no-repeat;
+  background: url("/static/img/alpaca.svg") 100% 101% /auto 27.5em no-repeat;
   right: var(--main-padding);
 }
 @media (min-width: 48em) {
@@ -314,6 +314,11 @@ body {
 }
 .contact__social--ig:hover {
   background-color: #f61c04;
+}
+
+/* Articles */
+.articles__item {
+  flex-basis: 22em;
 }
 
 /* Syntax Highlighting*/
