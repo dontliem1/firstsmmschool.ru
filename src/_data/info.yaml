@@ -1,10 +1,12 @@
----
 items:
-  - text: Всё о Школе SMM
-    href: "/"
-  - text: Записаться на курс
-    href: "/#register"
-  - text: Чек-лист по запуску рекламы в Фейсбуке
-    href: "https://bit.ly/3bhTujG"
+  - text: Инструкция «Как запустить рекламу в Facebook, если вы никогда этого
+      не делали»
+    href: https://bit.ly/3wvk8O2
+  - text: Чек-лист по запуску рекламы в Facebook
+    href: https://bit.ly/3bhTujG
+  - text: Сайт Школы
+    href: /
   - text: Наша группа ВКонтакте
-    href: "https://vk.com/first_smm_school"
+    href: https://vk.com/first_smm_school
+  - text: Наш Инстаграм
+    href: https://www.instagram.com/schoolsmm_tmn/
