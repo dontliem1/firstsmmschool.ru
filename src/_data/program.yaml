@@ -119,9 +119,9 @@ blocks:
         src: /static/img/teachers/katya.jpg
   - heading: Графический дизайн
     teachers:
-      - src: /static/img/teachers/misha.jpg
-        name: Михаил Воробьев
-        job: Верстальщик креативного агентства FOL'GA
+      - name: Екатерина Исаренко
+        job: Дизайнер креативного агентства FOL'GA
+        src: /static/img/teachers/katya.jpg
     instruments:
       - label: Встроенные возможности социальных сетей
       - label: Canva, Mojo
