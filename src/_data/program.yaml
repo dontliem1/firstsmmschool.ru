@@ -120,7 +120,6 @@ blocks:
   - heading: Графический дизайн
     teachers:
       - name: Екатерина Исаренко
-        job: Дизайнер креативного агентства FOL'GA
         src: /static/img/teachers/katya.jpg
     instruments:
       - label: Встроенные возможности социальных сетей
@@ -194,7 +193,7 @@ blocks:
     description: Работа с проектами и заказчиками.
     teachers:
       - name: Антон Данилов
-        job: управляющий креативного агентства FOL’GA
+        job: Менеджер креативного агентства FOL’GA
         src: /static/img/teachers/anton.jpg
   - heading: Практика
     id: practice

@@ -10,7 +10,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // human readable date
-  eleventyConfig.addFilter("readableDate", dateStr => (new Date(dateStr)).toLocaleDateString('ru', {day: "numeric", month: "long"}));
+  eleventyConfig.addFilter("readableDate", function(dateStr) {
+      return Date.parse(dateStr) ? (new Date(dateStr)).toLocaleDateString('ru', {day: "numeric", month: "long"}) : dateStr;
+  });
 
   // A year for footer
   eleventyConfig.addShortcode("currentYear", () => `${new Date().getFullYear()}`);
