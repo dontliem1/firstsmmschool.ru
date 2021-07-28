@@ -1,9 +1,9 @@
 <section class="main-feedback mb-10 lg:mb-20" id="feedback">
     {% if feedback.links %}
         <h2 class="text-4xl text-center mb-8">Отзывы учеников</h2>
-        <ul class="feedback__list mb-10 gap-4 flex flex-wrap xl:grid grid-cols-3">
+        <ul class="feedback__list mb-10 gap-4 flex flex-wrap xl:grid grid-cols-3 justify-center">
         {% for item in feedback.links %}
-            <li class="feedback__item pt-4 px-4 pb-6 rounded-2xl bg-white flex-grow inline-flex flex-col">
+            <li class="feedback__item pt-4 px-4 pb-6 rounded-2xl bg-white flex-grow inline-flex flex-col{% if loop.last %} col-span-3{% endif %}">
                 <figure class="flex items-center">
                     <img class="mr-3 rounded-lg" loading="lazy" src="{{item.src}}" alt="" width="64" height="64">
                     <figcaption>
@@ -12,13 +12,15 @@
                     </figcaption>
                 </figure>
                 <p class="mb-4 mt-2">{{item.text | safe}}</p>
-                <a class="underline mt-auto" href="{{item.url}}" target="_blank" rel="noopener noreferrer">Отзыв целиком</a>
+                {% if item.url %}
+                    <a class="underline mt-auto" href="{{item.url}}" target="_blank" rel="noopener noreferrer">Отзыв целиком</a>
+                {% endif %}
             </li>
         {% endfor %}
         </ul>
     {% endif %}
     {% if feedback.clients %}
-    <ul class="feedback__clients pb-4 flex flex-wrap justify-around text-center gap-4 md:gap-8 lg:gap-x-12 items-center">
+    <ul class="feedback__clients pb-4 flex flex-wrap justify-around text-center gap-4 md:gap-8 lg:gap-x-12 xl:gap-x-16 items-center">
         {% for item in feedback.clients %}
             <li><img class="feedback__client_img" loading="lazy" src="{{item.src}}" alt="{{item.alt}}" width="100"></li>
         {% endfor %}
